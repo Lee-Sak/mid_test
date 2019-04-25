@@ -24,8 +24,13 @@ int main(void) {
 			}
 			exit(EXIT_SUCCESS);
 		}
+		else {
+			if( wait(&status) != pid ) {
+				printf("wait error");
+				exit(1);
+			}
+		}
 	}
-		sleep(1);
 		
 		printf("result sum = %d\n", sum);
 		exit(EXIT_SUCCESS);
